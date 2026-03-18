@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost:8080/coming-soon.html -->
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="module" src="./assets/client"></script>
+<script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Turf Gaming – Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./assets/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./Assets/all.min.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
+
+  <linkrel="stylesheet" href="./assets/fontawesome/webfonts/fa-solid-900.woff2">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #ffffff;
+      background-color: #0e181a;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      position: relative;
+      width: 100%;
+      min-height: 1024px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Background image ── */
+    .bg {
+      position: absolute;
+      inset: 0;
+    background-image: url("./assets/bg-coming-soon_cropped.png");
+      background-size: cover;
+      background-position: left top;
+      z-index: 0;
+      color: #0e181a;
+;
+    }
+
+    /* Progressive blur mask – stronger toward bottom */
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+     background: linear-gradient(
+        360deg,
+        rgba(14, 24, 26, 1) 10%, 
+        rgba(14, 24, 26, 1) 13%, 
+        rgba(14, 24, 26, 1) 20%, 
+        rgba(14, 24, 26, 0) 50%, 
+        rgba(14, 24, 26, 0) 100%);
+      backdrop-filter: blur(0px);
+    }
+
+    /* ── Everything above the bg ── */
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 1024px;
+    }
+
+    /* ── Header ── */
+    header {
+      width: 100%;
+      height: 143px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 37px;
+      flex-shrink: 0;background: linear-gradient(
+        to top,
+       #0B12151a  0%,
+        #0B12154d 40%,
+        #0B12159e 65%,
+        #0B1215cc 85%,
+        #0B1215eb 100%
+      );
+      backdrop-filter: blur(0px);
+    }
+
+    .logo {
+      width: 157px;
+      height: 76px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 19px;
+      white-space: nowrap;
+      padding: 0 12px;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.75;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      margin-top: 44px; /* ~187px from top, header is 143px */
+      text-align: center;
+      width: 100%;
+      padding: 0 37px;
+    }
+
+    .hero h1 {
+      font-size: 93px;
+      font-weight: 800;
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: flex;
+      padding: 6px 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 33px;
+      border: 0.5px solid #FFF;
+      background: #156B15;
+      box-shadow: 0 0 4px 0 rgba(0, 255, 0, 0.55);
+      backdrop-filter: blur(2px);
+    }
+
+    .badge span {
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Description ── */
+    .description {
+      margin-top: 30px;
+      max-width: 1054px;
+      text-align: center;
+      font-size: 27px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: #fdfdfd;
+      padding: 0 37px;
+    }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background-color: #1caa1c15;
+      backdrop-filter: blur(10px); /* Use a vendor prefix like -webkit- for broader compatibility if needed */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      display: flex;
+      width: 625px;
+      padding: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+
+    }
+
+    .contact-box p {
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .contact-btn {
+      display: flex;
+      padding: 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      background-color: #1caa1c15;
+      backdrop-filter: blur(10px); 
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+           color: #ffffff;
+
+    }
+
+    .contact-btn:hover {
+      opacity: 0.8;
+    }
+
+    .contact-btn i {
+      font-size: 19px;
+      width: 19px;
+      text-align: center;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      width: 100%;
+      padding: 20px 37px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+    align-items: center;
+   
+    }
+    .hero h1 {
+      font-size: 93px;
+      font-weight: 800;
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+    
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+    flex-direction: column;
+      align-items: center;
+    }
+    .contact-box {
+      background-color: #1caa1c15;
+      backdrop-filter: blur(10px); /* Use a vendor prefix like -webkit- for broader compatibility if needed */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      display: flex;
+      width: 414px;
+      padding: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+
+    }
+
+    
+  }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg"></div>
+
+    <div class="content">
+      <!-- Header -->
+      <header>
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="Artificial Turf Gaming">
+        </div>
+        <!--
+        <nav>
+          <a href="http://localhost:8080/coming-soon.html#">ABOUT US</a>
+          <a href="http://localhost:8080/coming-soon.html#">iLOTTERY PRODUCTS</a>
+          <a href="http://localhost:8080/coming-soon.html#">SPORTS BETTING PRODUCTS</a>
+          <a href="http://localhost:8080/coming-soon.html#">REQUEST PRODUCTS</a>
+        </nav> -->
+
+      </header>
+
+      <!-- Hero -->
+      <div class="hero">
+        <h1>COMING SOON</h1>
+      </div>
+
+      <!-- Badge -->
+      <div class="badge">
+        <span>•&nbsp; AI POWERED GAME DESIGN STUDIO &nbsp;•</span>
+      </div>
+
+      <!-- Description -->
+      <p class="description">
+        ATG develops and licenses next-generation iLottery and online sports wagering products designed specifically for regulated lotteries and licensed sportsbook operators worldwide.
+      </p>
+
+      <!-- Contact box -->
+      <div class="contact-box">
+        <p>In the meantime, you can contact us by calling or emailing us to request a product demo or explore partnership opportunities:</p>
+        <div class="contact-buttons">
+          <a href="tel:+15613196669" class="contact-btn">
+            <i class="fa-solid fa-phone"></i>
+            +1 561 319 6669
+          </a>
+          <a href="mailto:brian.birkenmeyer@gmail.com" class="contact-btn">
+            <i class="fa-solid fa-envelope"></i>
+            brian.birkenmeyer@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        © 2026 Artificial Turf Gaming. &nbsp;All rights reserved
+      </footer>
+    </div>
+  </div>
+
+
+</body></html>
